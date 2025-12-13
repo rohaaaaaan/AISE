@@ -1,0 +1,89 @@
+.layersPanel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffffff;
+    border-right: 1px solid var(--border);
+    font-size: 0.875rem;
+    width: 100%;
+    overflow: hidden;
+    color: #000000;
+}
+
+.header {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+.list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+}
+
+.layerItem {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+/* Tree Guide Line */
+.layerItem::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: transparent;
+}
+
+.layerItem:hover {
+    background-color: #f1f3f5;
+}
+
+.layerItem.selected {
+    background-color: #e7f5ff;
+    border-left-color: var(--primary);
+}
+
+.nodeLabel {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 0.5rem;
+}
+
+.iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    color: var(--muted-foreground);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+
+.iconButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    opacity: 1;
+}
+
+.iconButton.active {
+    opacity: 1;
+    color: #000000;
+}

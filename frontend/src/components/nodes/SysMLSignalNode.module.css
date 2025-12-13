@@ -1,0 +1,77 @@
+.signalNode {
+    min-width: 100px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Send Signal - Pentagon shape pointing right */
+.send {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    padding-right: 30px;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Accept Event - Notched rectangle (arrow pointing in) */
+.accept {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
+    padding-left: 30px;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.content {
+    text-align: center;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.signalName {
+    font-size: 10px;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.handle {
+    background: #fff !important;
+    border: 2px solid #6d28d9 !important;
+    height: 8px !important;
+}
+
+/* Simulation Active State */
+.simulationActive {
+    border-color: #22c55e !important;
+    box-shadow:
+        0 0 20px rgba(74, 222, 128, 0.8),
+        0 0 40px rgba(74, 222, 128, 0.5),
+        0 0 60px rgba(74, 222, 128, 0.3);
+    animation: signalPulse 1s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes signalPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 20px rgba(74, 222, 128, 0.8),
+            0 0 40px rgba(74, 222, 128, 0.5),
+            0 0 60px rgba(74, 222, 128, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px rgba(74, 222, 128, 1),
+            0 0 60px rgba(74, 222, 128, 0.7),
+            0 0 90px rgba(74, 222, 128, 0.5);
+    }
+}

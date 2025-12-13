@@ -1,0 +1,73 @@
+.sidebar {
+    width: 64px;
+    height: 100vh;
+    background-color: var(--secondary);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 50;
+}
+
+.logoContainer {
+    margin-bottom: 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius);
+    color: var(--muted-foreground);
+    transition: all 0.2s;
+    position: relative;
+}
+
+.navItem:hover {
+    background-color: var(--muted);
+    color: var(--foreground);
+}
+
+.navItemActive {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.tooltip {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    background-color: var(--secondary);
+    border: 1px solid var(--border);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+.navItem:hover .tooltip {
+    opacity: 1;
+}

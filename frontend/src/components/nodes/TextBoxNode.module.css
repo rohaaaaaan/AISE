@@ -1,0 +1,89 @@
+.textBoxNode {
+    position: relative;
+    min-width: 100px;
+    min-height: 40px;
+    background: #2a2a3e;
+    border: 1px solid #4b5563;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+    cursor: text;
+}
+
+.textBoxNode:hover {
+    border-color: #6366f1;
+}
+
+.textBoxNode.selected {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Note style variant */
+.textBoxNode.note {
+    background: #fef3c7;
+    border-color: #f59e0b;
+    border-radius: 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.textBoxNode.note .content {
+    color: #1f2937;
+}
+
+/* Comment style variant */
+.textBoxNode.comment {
+    background: transparent;
+    border: 2px dashed #9ca3af;
+    border-radius: 8px;
+}
+
+/* Content area */
+.content {
+    outline: none;
+    min-height: 20px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #e5e7eb;
+    line-height: 1.4;
+}
+
+.content:empty::before {
+    content: 'Double-click to edit...';
+    color: #6b7280;
+    font-style: italic;
+}
+
+.content:focus {
+    outline: none;
+}
+
+/* Editing mode */
+.textBoxNode.editing {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+}
+
+/* Style variants */
+.textBoxNode.transparent {
+    background: transparent;
+    border: none;
+}
+
+.textBoxNode.bordered {
+    background: transparent;
+    border: 2px solid #6366f1;
+}
+
+/* Font styles */
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}

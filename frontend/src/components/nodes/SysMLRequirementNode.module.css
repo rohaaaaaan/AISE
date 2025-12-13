@@ -1,0 +1,59 @@
+.sysmlRequirement {
+    background-color: #fffbeb; /* Light yellow/beige */
+    border: 1px solid #d97706; /* Amber border */
+    color: #000000;
+    min-width: 180px;
+    min-height: 100px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+    border-bottom: 1px solid #d97706;
+    padding: 8px 4px;
+    text-align: center;
+    background-color: #fef3c7; /* Slightly darker header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stereotype {
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-bottom: 2px;
+    color: #92400e;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.body {
+    padding: 8px;
+    flex: 1;
+    font-size: 0.85rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reqId {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #92400e;
+}
+
+.reqText {
+    font-style: italic;
+    color: #333;
+}

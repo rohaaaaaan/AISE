@@ -1,0 +1,109 @@
+.constraintBlock {
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    border: 2px solid #4c1d95;
+    border-radius: 8px;
+    min-width: 150px;
+    min-height: 100px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    color: white;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.stereotype {
+    text-align: center;
+    font-size: 10px;
+    font-style: italic;
+    padding: 4px 8px;
+    opacity: 0.85;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.equation {
+    text-align: center;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 13px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.15);
+    margin: 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.parameters {
+    padding: 8px 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.parameter {
+    font-size: 11px;
+    padding: 2px 0;
+    opacity: 0.9;
+}
+
+.parameter::before {
+    content: '• ';
+    opacity: 0.6;
+}
+
+/* Connection handles - positioned on the node edges */
+.handle {
+    width: 10px;
+    height: 10px;
+    background: #a78bfa;
+    border: 2px solid #4c1d95;
+    /* React Flow automatically positions handles at the edge 
+       based on Position.Left/Right/Top/Bottom.
+       We just ensure visibility when selected */
+}
+
+.resizerLine {
+    border-color: #a78bfa !important;
+}
+
+.resizerHandle {
+    background: #7c3aed !important;
+    border-color: #4c1d95 !important;
+    width: 8px !important;
+    height: 8px !important;
+}
+
+/* Parameter Port Container - positioned absolutely on edges */
+.parameterPortContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Parameter Port - small purple square */
+.parameterPort {
+    width: 10px !important;
+    height: 10px !important;
+    background: #a78bfa !important;
+    border: 2px solid #4c1d95 !important;
+    border-radius: 2px !important;
+}
+
+/* Parameter Label - tiny text next to port */
+.parameterLabel {
+    position: absolute;
+    font-size: 9px;
+    color: #c4b5fd;
+    white-space: nowrap;
+    pointer-events: none;
+}

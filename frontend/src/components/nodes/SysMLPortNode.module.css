@@ -1,0 +1,43 @@
+.sysmlPort {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    position: relative;
+    cursor: crosshair;
+}
+
+/* Port Types */
+.proxy {
+    /* Default look */
+    border-style: solid;
+}
+
+.full {
+    background-color: #e0e0e0;
+    /* Slightly darker to indicate "solid" part */
+    border-width: 2px;
+}
+
+/* Direction Indicators */
+.directionIcon {
+    font-size: 12px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.label {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    white-space: nowrap;
+    pointer-events: none;
+    color: #333;
+}

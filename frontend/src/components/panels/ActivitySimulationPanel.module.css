@@ -1,0 +1,464 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--bg-secondary, #1a1a2e);
+    color: var(--text-primary, #e0e0e0);
+    font-size: 0.85rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #2d3a4f 0%, #1e2a3a 100%);
+}
+
+.title {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.sessionInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 4px;
+}
+
+.controlBtn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.controlBtn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.controlBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.playBtn {
+    background: rgba(34, 197, 94, 0.3);
+    color: #4ade80;
+}
+
+.playBtn:hover {
+    background: rgba(34, 197, 94, 0.5) !important;
+}
+
+.pauseBtn {
+    background: rgba(234, 179, 8, 0.3);
+    color: #fbbf24;
+}
+
+.pauseBtn:hover {
+    background: rgba(234, 179, 8, 0.5) !important;
+}
+
+.speedControl {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.speedControl input[type="range"] {
+    width: 60px;
+    height: 4px;
+    accent-color: #3b82f6;
+}
+
+.speedControl span {
+    min-width: 30px;
+    text-align: right;
+    color: #60a5fa;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    gap: 16px;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.statLabel {
+    font-size: 0.7rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.statValue {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #60a5fa;
+}
+
+/* Variables Panel */
+.variablesPanel {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.sectionHeader {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.variablesTable {
+    width: 100%;
+    font-size: 0.75rem;
+    border-collapse: collapse;
+}
+
+.variablesTable th,
+.variablesTable td {
+    padding: 4px 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+}
+
+.variablesTable th {
+    color: #888;
+    font-weight: 500;
+}
+
+.variablesTable td.completed {
+    color: #4ade80;
+}
+
+/* Console */
+.consoleSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.consoleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 0.75rem;
+    color: #888;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.autoScrollLabel {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.autoScrollLabel input {
+    accent-color: #3b82f6;
+}
+
+.console {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.72rem;
+    background: rgba(0, 0, 0, 0.4);
+    min-height: 150px;
+}
+
+.logLine {
+    display: flex;
+    gap: 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    margin-bottom: 2px;
+}
+
+.logLine:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.timestamp {
+    color: #666;
+    min-width: 90px;
+    font-size: 0.68rem;
+}
+
+.logMessage {
+    flex: 1;
+    word-break: break-word;
+}
+
+.logInfo {
+    color: #a0aec0;
+}
+
+.logWarning {
+    color: #fbbf24;
+    background: rgba(234, 179, 8, 0.1);
+}
+
+.logError {
+    color: #f87171;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.logSuccess {
+    color: #4ade80;
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.emptyConsole {
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Scrollbar */
+.console::-webkit-scrollbar,
+.variablesPanel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.console::-webkit-scrollbar-track,
+.variablesPanel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.console::-webkit-scrollbar-thumb,
+.variablesPanel::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+}
+
+.console::-webkit-scrollbar-thumb:hover,
+.variablesPanel::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Decision Overlay */
+.decisionPanel {
+    margin: 10px;
+    padding: 12px;
+    background: rgba(234, 179, 8, 0.1);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: 6px;
+    animation: fadeIn 0.3s ease;
+}
+
+.decisionHeader {
+    font-weight: 600;
+    color: #fbbf24;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.decisionText {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.decisionButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.decisionOptionBtn {
+    padding: 6px 12px;
+    background: rgba(234, 179, 8, 0.2);
+    border: 1px solid rgba(234, 179, 8, 0.4);
+    color: #fbbf24;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.decisionOptionBtn:hover {
+    background: rgba(234, 179, 8, 0.4);
+    transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Editable Variables */
+.addVariableRow {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    padding: 0 8px;
+}
+
+.varNameInput,
+.varValueInput {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    width: 80px;
+}
+
+.varValueInput {
+    flex: 1;
+}
+
+.addVarBtn {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addVarBtn:hover {
+    background: rgba(34, 197, 94, 0.4);
+}
+
+.editableValue {
+    background: transparent;
+    border: none;
+    color: inherit;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+.editableValue:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Toggle Switch */
+.toggleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 8px;
+}
+
+.toggleText {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+.toggleLabel {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+}
+
+.toggleLabel input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4b5563;
+    transition: .4s;
+    border-radius: 16px;
+}
+
+.toggleSlider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggleLabel input:checked+.toggleSlider {
+    background-color: #fbbf24;
+}
+
+.toggleLabel input:checked+.toggleSlider:before {
+    transform: translateX(12px);
+}

@@ -1,0 +1,149 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+}
+
+.modal {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    width: 600px;
+    max-width: 90vw;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.closeBtn {
+    background: transparent;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.closeBtn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.content {
+    padding: 20px;
+    flex: 1;
+}
+
+.description {
+    margin: 0 0 12px 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.textarea {
+    width: 100%;
+    height: 300px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #a0a0a0;
+    font-family: 'Consolas', monospace;
+    font-size: 0.85rem;
+    padding: 12px;
+    resize: vertical;
+    outline: none;
+}
+
+.textarea:focus {
+    border-color: #3b82f6;
+    color: #e0e0e0;
+}
+
+.error {
+    margin-top: 8px;
+    color: #ef4444;
+    font-size: 0.8rem;
+    background: rgba(239, 68, 68, 0.1);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.footer {
+    padding: 16px 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.cancelBtn {
+    background: transparent;
+    border: 1px solid #444;
+    color: #aaa;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.cancelBtn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.importBtn {
+    background: #3b82f6;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.importBtn:hover {
+    background: #2563eb;
+}

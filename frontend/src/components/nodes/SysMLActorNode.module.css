@@ -1,0 +1,37 @@
+.sysmlActor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    min-height: 120px;
+    padding: 8px;
+    background: white;
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sysmlActor:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #2563eb;
+}
+
+.stickFigure {
+    width: 50px;
+    height: 80px;
+    color: #3b82f6;
+    margin-bottom: 4px;
+}
+
+.label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1e293b;
+    text-align: center;
+    word-break: break-word;
+    max-width: 100%;
+}

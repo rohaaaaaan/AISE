@@ -1,0 +1,102 @@
+.propertiesPanel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--secondary);
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.noSelection {
+    color: var(--muted-foreground);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.field {
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+    margin-bottom: 0.25rem;
+}
+
+.value {
+    font-size: 0.85rem;
+    color: var(--foreground);
+    padding: 0.25rem 0;
+}
+
+.input,
+.textarea,
+.select {
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    background-color: var(--input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--foreground);
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.textarea {
+    min-height: 60px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    border-color: var(--primary);
+}
+
+.sectionHeader {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 1.5rem 0 0.5rem 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.checkbox {
+    cursor: pointer;
+}

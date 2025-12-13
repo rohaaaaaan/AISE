@@ -1,0 +1,125 @@
+.pseudoStateNode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* History (Circle with H or H*) */
+.history {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #1a1a2e;
+    border: 2px solid #6366f1;
+    color: #6366f1;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.history:hover {
+    border-color: #818cf8;
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+}
+
+/* Entry Point (Circle on border - filled) */
+.entryPoint {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #10b981;
+    border: 2px solid #10b981;
+}
+
+.entryPoint:hover {
+    background: #34d399;
+    border-color: #34d399;
+}
+
+/* Exit Point (Circle with X) */
+.exitPoint {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #ef4444;
+    position: relative;
+}
+
+.exitPoint::before,
+.exitPoint::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 2px;
+    background: #ef4444;
+}
+
+.exitPoint::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.exitPoint::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.exitPoint:hover {
+    border-color: #f87171;
+}
+
+.exitPoint:hover::before,
+.exitPoint:hover::after {
+    background: #f87171;
+}
+
+/* Terminate (X shape) */
+.terminate {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.terminate::before,
+.terminate::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 3px;
+    background: #ef4444;
+}
+
+.terminate::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.terminate::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.terminate:hover::before,
+.terminate:hover::after {
+    background: #f87171;
+}
+
+/* Junction (Filled circle) */
+.junction {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1f2937;
+    border: none;
+}
+
+.junction:hover {
+    background: #374151;
+}
+
+.selected {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}

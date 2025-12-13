@@ -1,0 +1,60 @@
+.sysmlBlock {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    color: #000000;
+    min-width: 150px;
+    min-height: 100px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.header {
+    border-bottom: 1px solid #000000;
+    padding: 8px 4px;
+    text-align: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 40px;
+}
+
+.stereotype {
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-bottom: 2px;
+    color: #333;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.compartment {
+    padding: 6px 8px;
+    flex: 1;
+    font-size: 0.8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.separator {
+    border-bottom: 1px dashed #888;
+    margin: 6px 0;
+    width: 100%;
+}

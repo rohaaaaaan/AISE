@@ -1,0 +1,40 @@
+.sysmlSystemBoundary {
+    position: relative;
+    min-width: 300px;
+    min-height: 200px;
+    background: rgba(250, 245, 255, 0.9);
+    border: 3px solid #9333ea;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sysmlSystemBoundary:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #7c3aed;
+}
+
+.header {
+    position: absolute;
+    top: -1px;
+    left: 12px;
+    background: white;
+    padding: 4px 12px;
+    border: 2px solid #9333ea;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #7c3aed;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.content {
+    padding: 40px 20px 20px 20px;
+    min-height: 160px;
+}

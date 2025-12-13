@@ -1,0 +1,61 @@
+.lifelineNode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.head {
+    width: 100px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    padding: 4px;
+    color: #000;
+    /* Force black text on white background */
+    z-index: 2;
+    /* Check z-index stacking */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.selected .head {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.timeline {
+    position: absolute;
+    top: 50px;
+    /* Height of head */
+    bottom: 0;
+    width: 0;
+    border-left: 2px dashed #555;
+    z-index: 1;
+    left: 50%;
+    /* Center the line */
+    transform: translateX(-1px);
+    /* Perfect center adjust */
+}
+
+/* 
+   We need invisible handles along the timeline to easier allow connections. 
+   Or just one big handle? 
+   React Flow handles are tricky for "infinite" attachment points.
+   We often use a full-height target handle overlay.
+*/
+.handleOverlay {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 40%;
+    right: 40%;
+    /* border: 1px solid pink; Debug */
+    z-index: 10;
+}

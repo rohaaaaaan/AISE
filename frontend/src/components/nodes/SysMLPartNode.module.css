@@ -1,0 +1,56 @@
+.sysmlPart {
+    background: #fffbd5;
+    /* Cameo-like pale yellow */
+    border: 1px solid #7b7b7b;
+    /* Slightly softer border */
+    min-width: 100px;
+    min-height: 50px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+.header {
+    border-bottom: 1px solid #7b7b7b;
+    background: #fff5aa;
+    /* Slightly darker yellow for header */
+    padding: 6px 8px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.body {
+    flex-grow: 1;
+    padding: 4px;
+    background: #fffbd5;
+    /* Match main background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typeHint {
+    font-size: 10px;
+    color: #888;
+    font-style: italic;
+}
+
+.proxyPort {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    z-index: 10;
+}

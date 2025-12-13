@@ -1,0 +1,124 @@
+.topBar {
+    height: 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    user-select: none;
+    z-index: 100;
+    color: #000000;
+}
+
+.menuItem {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.menuItem:hover {
+    background-color: #e0e0e0;
+}
+
+.separator {
+    grid-column: 1 / -1;
+    /* Span all columns */
+    height: 1px;
+    background-color: #ddd;
+    margin: 5px 0;
+}
+
+.actionButton {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background: none;
+    font-size: 12px;
+}
+
+.actionButton:hover {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+}
+
+.actionButton.active {
+    background-color: #d0d0d0;
+    border-color: #bbb;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.popover {
+    position: absolute;
+    top: 40px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 101;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    min-width: 200px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.toolboxItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    cursor: grab;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.toolboxItem:hover {
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}
+
+.connectorItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.connectorItem:hover {
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}
+
+.connectorItem.selected {
+    background-color: #e7f5ff;
+    border-color: var(--primary);
+}
+
+.connectorCategory {
+    grid-column: 1 / -1;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #666;
+    padding: 8px 5px 4px 5px;
+    margin-top: 4px;
+    border-top: 1px solid #e0e0e0;
+    letter-spacing: 0.5px;
+}
+
+.connectorCategory:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+}

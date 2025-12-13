@@ -1,0 +1,39 @@
+
+// Root View Logic (activeViewId === null)
+// We need to show:
+// 1. All Top Level nodes
+// 2. Children of "Diagram Frames" (logical containers)
+// 3. Children of "Visual Containers" like System Boundary, Swimlane, Interruptible Region, etc.
+//    (These containers visually wrap children but children are just filtered out currently)
+
+const visualContainers = [
+    'diagramFrame', 
+    'sysmlSystemBoundary', 
+    'sysmlSwimlane', 
+    'sysmlInterruptibleRegion'
+];
+
+return nodes.reduce((acc: Node[], node) => {
+    // Rule: Show if it has no parent (Top-level Node)
+    if (!node.parentId) {
+      acc.push(node);
+      return acc;
+    }
+
+    // Find parent
+    const parent = nodes.find(n => n.id === node.parentId);
+
+    // Rule: Show if parent is a Visual Container
+    if (parent && visualContainers.includes(parent.type || '')) {
+         acc.push(node);
+         return acc;
+    }
+
+    // Rule: ALSO show if it is a Port attached to a Top-level Node
+    if (node.type === 'sysmlPort') {
+      if (parent && !parent.parentId) {
+        acc.push(node);
+      }
+    }
+    return acc;
+  }, []);

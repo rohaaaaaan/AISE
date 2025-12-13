@@ -1,0 +1,45 @@
+.legend {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    font-size: 0.8rem;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    width: 200px;
+}
+
+.title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.25rem;
+    color: #000;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.colorBox {
+    width: 12px;
+    height: 12px;
+    margin-right: 0.5rem;
+    border: 1px solid #000;
+}
+
+.connectorIcon {
+    margin-right: 0.5rem;
+    display: block;
+}
+
+.label {
+    color: #000;
+}

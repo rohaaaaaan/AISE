@@ -1,0 +1,52 @@
+.stateNode {
+    min-width: 100px;
+    min-height: 60px;
+    background-color: #1e1e1e;
+    /* Dark theme background */
+    border: 1px solid #b1b1b7;
+    border-radius: 12px;
+    /* Distinctive State Machine Shape */
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.selected {
+    border-color: #f59e0b;
+    /* Amber selection for states? or standard blue? Let's stick to blue for consistency or maybe distinct. Standard blue #3b82f6 */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    border-color: #3b82f6;
+}
+
+.header {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    font-weight: 600;
+}
+
+.body {
+    flex-grow: 1;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.internalActivity {
+    font-size: 10px;
+    color: #aaa;
+    margin-bottom: 2px;
+    font-family: monospace;
+}
+
+/* Composite State Region hint */
+.region {
+    border-top: 1px dashed #555;
+    margin-top: 4px;
+    padding-top: 4px;
+    flex-grow: 1;
+}

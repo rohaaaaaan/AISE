@@ -1,0 +1,147 @@
+.modelBrowser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    height: 100%;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-right: 1px solid #333;
+    font-size: 13px;
+}
+
+/* Tabs Section */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #333;
+    background-color: #252526;
+}
+
+.tab {
+    padding: 6px 12px;
+    cursor: pointer;
+    border-right: 1px solid #333;
+    color: #999;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tab.active {
+    background-color: #1e1e1e;
+    color: #fff;
+    border-top: 2px solid #007acc;
+}
+
+.tab:hover:not(.active) {
+    background-color: #2d2d2d;
+}
+
+/* Toolbar Section */
+.toolbar {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-bottom: 1px solid #333;
+    background-color: #252526;
+    gap: 4px;
+}
+
+.toolButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #ccc;
+    border: 1px solid transparent;
+}
+
+.toolButton:hover {
+    background-color: #3e3e42;
+    border-color: #4e4e52;
+}
+
+/* Search Section */
+.searchContainer {
+    padding: 4px;
+    border-bottom: 1px solid #333;
+    background-color: #252526;
+}
+
+.searchInput {
+    background-color: #3c3c3c;
+    border: 1px solid #3c3c3c;
+    color: #fff;
+    padding: 2px 4px 2px 24px;
+    font-size: 12px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #007acc;
+}
+
+/* Tree List */
+.list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 4px 0;
+}
+
+.treeItem {
+    display: flex;
+    align-items: center;
+    padding: 2px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.treeItem:hover {
+    background-color: #2a2d2e;
+}
+
+.treeItem.selected {
+    background-color: #094771;
+    color: #fff;
+    border-color: #007acc;
+}
+
+.iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    opacity: 0;
+    /* Hide icons by default */
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.treeItem:hover .iconButton {
+    opacity: 1;
+}
+
+.iconButton:hover {
+    color: #e5e7eb;
+}
+
+.iconButton.active {
+    opacity: 1;
+    color: #e5e7eb;
+}
+
+.nodeLabel {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

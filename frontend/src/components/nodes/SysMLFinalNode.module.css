@@ -1,0 +1,92 @@
+.finalNode {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outerCircle {
+    width: 24px;
+    height: 24px;
+    background: white;
+    border: 3px solid #1f2937;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.innerCircle {
+    width: 12px;
+    height: 12px;
+    background: #1f2937;
+    border-radius: 50%;
+}
+
+/* Flow Final - X shape */
+.cross {
+    width: 10px;
+    height: 10px;
+    position: relative;
+}
+
+.cross::before,
+.cross::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: #1f2937;
+    top: 50%;
+    left: 50%;
+}
+
+.cross::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cross::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.handle {
+    background: #4b5563 !important;
+    border: 2px solid #1f2937 !important;
+    width: 6px !important;
+    height: 6px !important;
+    opacity: 0;
+}
+
+.handle:hover {
+    opacity: 1;
+}
+
+/* Simulation Active State */
+.simulationActive {
+    background: white;
+    /* Keep white bg */
+    border-color: #22c55e !important;
+    box-shadow:
+        0 0 10px rgba(74, 222, 128, 0.8),
+        0 0 20px rgba(74, 222, 128, 0.4);
+    animation: finalPulse 1s ease-in-out infinite;
+}
+
+@keyframes finalPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 10px rgba(74, 222, 128, 0.8),
+            0 0 20px rgba(74, 222, 128, 0.4);
+    }
+
+    50% {
+        box-shadow:
+            0 0 15px rgba(74, 222, 128, 1),
+            0 0 30px rgba(74, 222, 128, 0.6);
+    }
+}
